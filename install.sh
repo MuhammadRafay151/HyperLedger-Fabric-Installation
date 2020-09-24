@@ -17,3 +17,12 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.3/docker-
 
 sudo chmod +x /usr/local/bin/docker-compose
 
+echo Your pc needs to restart to apply changes.do you want to restart? y/n
+read varname
+if [ $varname = 'y' ] || [ $varname = 'Y' ] 
+then
+sudo reboot
+else
+echo "warning!!!"
+echo "reboot is required before installing hyperledger fabric" 
+fi
